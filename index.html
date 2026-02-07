@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>国一覧アプリ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="title-area">
+      <h1 class="site-title">
+        <span class="icon">🌎</span>
+        Country Explorer
+      </h1>
+      <p class="subtitle">Explore countries around the world</p>
+    </div>
+
+    <label class="fav-toggle">
+      <input type="checkbox" id="fav-only">
+      <span>お気に入りだけ表示</span>
+      <span class="fav-count">0</span>
+    </label>
+  </div>
+
+  <input type="text" id="search" placeholder="国名で検索">
+  <button id="reset" class="reset-btn">リセット</button>
+  <select id="region">
+    <option value="all">全部</option>
+    <option value="Asia">Asia</option>
+    <option value="Africa">Africa</option>
+    <option value="Americas">Americas</option>
+    <option value="Europe">Europe</option>
+    <option value="Oceania">Oceania</option>
+  </select>
+
+  <button id="sort">人口が多い順</button>
+  <ul id="country-list"></ul>
+
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+      <button id="close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
